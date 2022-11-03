@@ -2,6 +2,7 @@
 
 mod chain;
 mod hash;
+#[cfg(feature = "serde")]
 mod serde;
 
 pub use chain::HashChain;

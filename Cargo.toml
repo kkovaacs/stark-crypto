@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 members = [
     "stark_curve",
     "stark_hash",
