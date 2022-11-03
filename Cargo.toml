@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
 members = [
-    "stark_curve",
-    "stark_hash",
+    "starknet_crypto",
+    "starknet_curve",
 ]

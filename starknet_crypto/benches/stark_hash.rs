@@ -1,4 +1,4 @@
-use ::stark_hash::{stark_hash, HashChain, StarkHash};
+use ::starknet_crypto::{stark_hash, HashChain, StarkHash};
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 pub fn criterion_benchmark(c: &mut Criterion) {

@@ -1,4 +1,4 @@
-# `stark_hash`
+# `starknet_crypto`
 
 A crate implementing Starknet field elements and the hash algorithm.
 
@@ -11,4 +11,4 @@ A crate implementing Starknet field elements and the hash algorithm.
 
 ## Disclaimer
 
-_The implementation is NOT constant time._
+_The implementation is NOT constant time._ Do _not_ use this implementation to build digital signatures.

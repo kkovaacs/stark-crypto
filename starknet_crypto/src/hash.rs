@@ -2,10 +2,10 @@ use std::borrow::Cow;
 use std::error::Error;
 use std::fmt::Display;
 
-use stark_curve::{AffinePoint, FieldElement, FieldElementRepr, ProjectivePoint, PEDERSEN_P0};
+use starknet_curve::{AffinePoint, FieldElement, FieldElementRepr, ProjectivePoint, PEDERSEN_P0};
 
 use bitvec::{field::BitField, order::Msb0, slice::BitSlice, view::BitView};
-use stark_curve::ff::PrimeField;
+use starknet_curve::ff::PrimeField;
 
 include!(concat!(env!("OUT_DIR"), "/curve_consts.rs"));
 
@@ -109,7 +109,7 @@ impl StarkHash {
     }
 
     pub fn random<R: rand_core::RngCore>(rng: R) -> Self {
-        use stark_curve::ff::Field;
+        use starknet_curve::ff::Field;
         StarkHash(FieldElement::random(rng).to_repr().0)
     }
 
@@ -177,7 +177,7 @@ impl StarkHash {
             if index == limbs.len() {
                 break;
             }
-            borrow = stark_curve::ff::derive::sbb(limbs[index], modulus[index], borrow).1;
+            borrow = starknet_curve::ff::derive::sbb(limbs[index], modulus[index], borrow).1;
             index += 1;
         }
 

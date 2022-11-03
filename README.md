@@ -1,1 +1,1 @@
-stark_hash/README.md
+starknet_crypto/README.md

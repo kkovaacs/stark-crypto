@@ -3,7 +3,7 @@ use std::fmt::Write;
 use std::fs;
 use std::path::Path;
 
-use stark_curve::*;
+use starknet_curve::*;
 
 fn generate_consts(bits: u32) -> Result<String, std::fmt::Error> {
     let mut buf = String::with_capacity(10 * 1024 * 1024);
