@@ -6,4 +6,4 @@ mod hash;
 mod serde;
 
 pub use chain::HashChain;
-pub use hash::{stark_hash, HexParseError, OverflowError, StarkHash};
+pub use hash::{stark_hash, Felt, HexParseError, OverflowError};
