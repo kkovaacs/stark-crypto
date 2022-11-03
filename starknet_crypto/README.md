@@ -1,5 +1,7 @@
 # `starknet_crypto`
 
+[![Build status](https://github.com/eqlabs/starknet-crypto/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/eqlabs/starknet-crypto/actions/workflows/ci.yml)
+
 Rust crate for Starknet crypto primitives.
 
 Currently implements the finite field, the elliptic curve and hash algorithms.
