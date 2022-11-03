@@ -1,6 +1,8 @@
 # `starknet_crypto`
 
-A crate implementing Starknet field elements and the hash algorithm.
+Rust crate for Starknet crypto primitives.
+
+Currently implements the finite field, the elliptic curve and hash algorithms.
 
 ## Features
 
