@@ -1,12 +1,14 @@
 use crate::{stark_hash, Felt};
 
-/// HashChain is the structure used over at cairo side to represent the hash construction needed
-/// for computing the class hash.
+/// HashChain implements the array hashing construct of Starknet.
 ///
-/// Empty hash chained value equals `H(0, 0)` where `H` is the [`stark_hash()`] function, and the
-/// second value is the number of values hashed together in this chain. For other values, the
-/// accumulator is on each update replaced with the `H(hash, value)` and the number of count
-/// incremented by one.
+/// The definition of the hash of an array a1, ..., an of field elements is
+/// `H(...H(H(0, a1), a2), ..., an), n)` where `H` is the [`stark_hash()`] function.
+/// <https://docs.starknet.io/documentation/develop/Hashing/hash-functions/#array_hashing>
+///
+/// Empty hash chained value equals `H(0, 0)`, where the second zero is the number of values
+/// hashed together in this chain. For other values, the accumulator is on each update replaced
+/// with the `H(hash, value)` and the number of count incremented by one.
 #[derive(Default)]
 pub struct HashChain {
     hash: Felt,
