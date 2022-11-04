@@ -1,9 +1,12 @@
 [package]
-name = "starknet_curve"
-version = "0.1.0"
+categories = ["cryptography"]
+description = "Implementation of the STARK-friendly elliptic curve used by Starknet"
 edition = "2021"
+homepage = "https://github.com/eqlabs/starknet-crypto"
 license = "MIT OR Apache-2.0"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+name = "starknet_curve"
+repository = "https://github.com/eqlabs/starknet-crypto"
+version = "0.1.0"
 
 [lib]
 name = "starknet_curve"
